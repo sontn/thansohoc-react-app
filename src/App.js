@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 
 // Initialize Google Analytics
 const trackingId = "G-W5H2WCTTML"; // Replace with your Google Analytics tracking ID
@@ -13,7 +13,8 @@ function App() {
 
   // Track page view on component mount
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    console.log("Tracking page view:", window.location.pathname + window.location.search);
+    ReactGA.send("pageview");
   }, []);
 
   const handleSubmit = async (e) => {
