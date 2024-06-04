@@ -1,0 +1,115 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7f6;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  margin: 20px;
+  height: 200vh;
+}
+
+.App {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input[type='tel'] {
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 50%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 50%;
+  margin: 0 auto;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333333;
+}
+
+h2 {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #555555;
+}
+
+p {
+  font-size: 16px;
+  color: #777777;
+}
+
+/* Result and Error Styles */
+#result, #error {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#result {
+  background-color: #e0f7fa;
+  color: #00796b;
+}
+
+#error {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .App {
+    padding: 20px;
+  }
+
+  input[type='tel'],
+  button {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
