@@ -10,10 +10,14 @@ function App() {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [result, setResult] = useState("");
   const [error, setError] = useState("");
+  const phoneRegex = /^[0-9 +]{1,15}$/;
 
   // Track page view on component mount
   useEffect(() => {
-    console.log("Tracking page view:", window.location.pathname + window.location.search);
+    console.log(
+      "Tracking page view:",
+      window.location.pathname + window.location.search
+    );
     ReactGA.send("pageview");
   }, []);
 
@@ -21,6 +25,14 @@ function App() {
     e.preventDefault();
     setError("");
     setResult(""); // Clear the result when a new submission is made
+
+    // Validate phone number format
+    if (!phoneRegex.test(phoneNumber)) {
+      setError(
+        "Số điện thoại phải có độ dài từ 1 đến 12 ký tự, bao gồm chữ số, dấu cách"
+      );
+      return;
+    }
 
     // Track form submission event
     ReactGA.event({
