@@ -50,7 +50,7 @@ function App() {
         </label>
         <button type="submit">Xem quẻ</button>
       </form>
-      <div>
+      <div id="result">
         <h2>Kết quả:</h2>
         <p>{result || 'Chưa có kết quả'}</p>
       </div>
