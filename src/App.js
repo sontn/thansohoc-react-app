@@ -1,15 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
+import ReactGA from "react-ga";
+
+// Initialize Google Analytics
+const trackingId = "G-W5H2WCTTML"; // Replace with your Google Analytics tracking ID
+ReactGA.initialize(trackingId);
 
 function App() {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [result, setResult] = useState("");
   const [error, setError] = useState("");
 
+  // Track page view on component mount
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
     setResult(""); // Clear the result when a new submission is made
+
+    // Track form submission event
+    ReactGA.event({
+      category: "User",
+      action: "Submitted Phone Number",
+      label: phoneNumber,
+    });
 
     try {
       const response = await fetch(
