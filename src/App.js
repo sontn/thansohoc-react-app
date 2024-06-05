@@ -92,6 +92,11 @@ function App() {
           <p>{error}</p>
         </div>
       )}
+      <p>
+        Truy cập{" "}
+        <a href="https://tracuuthansohoc.live">https://tracuuthansohoc.live</a>{" "}
+        bằng QR code:
+      </p>
       <div id="qr-code">
         <QRCode value="https://tracuuthansohoc.live" />
       </div>
