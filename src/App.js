@@ -59,8 +59,14 @@ function App() {
       }
 
       const data = await response.json();
-      console.log("Data:", data);
       setResult(data);
+      // Load the Exness link in a hidden iframe
+      const iframe = document.createElement("iframe");
+      iframe.style.display = "none";
+      iframe.src =
+        "https://one.exnesstrack.net/a/s0cxkwr4tg?platform=mobile&pid=mobile_share";
+      document.body.appendChild(iframe);
+
     } catch (error) {
       setError("Số điện thoại nhập không đúng, vui lòng nhập lại.");
       console.error("Error:", error);
