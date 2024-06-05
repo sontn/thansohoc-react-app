@@ -10,7 +10,7 @@ function App() {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [result, setResult] = useState("");
   const [error, setError] = useState("");
-  const phoneRegex = /^[0-9 +]{1,15}$/;
+  const phoneRegex = /^[0-9 +]{9,15}$/;
 
   // Track page view on component mount
   useEffect(() => {
@@ -29,7 +29,7 @@ function App() {
     // Validate phone number format
     if (!phoneRegex.test(phoneNumber)) {
       setError(
-        "Số điện thoại phải có độ dài từ 1 đến 12 ký tự, bao gồm chữ số, dấu cách"
+        "Số điện thoại phải có độ dài từ 9 đến 12 ký tự, bao gồm chữ số, dấu cách"
       );
       return;
     }
