@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import ReactGA from "react-ga4";
-import QRCode from "qrcode.react";
+// import QRCode from "qrcode.react";
 
 // Initialize Google Analytics
 const trackingId = "G-W5H2WCTTML"; // Replace with your Google Analytics tracking ID
@@ -92,13 +92,23 @@ function App() {
           <p>{error}</p>
         </div>
       )}
-      <p>
+      {/* <p>
         Truy cập{" "}
         <a href="https://tracuuthansohoc.live">https://tracuuthansohoc.live</a>{" "}
         bằng QR code:
       </p>
       <div id="qr-code">
         <QRCode value="https://tracuuthansohoc.live" />
+      </div> */}
+      <div id="exness-link">
+        <p>Tham gia Exness và giao dịch</p>
+        <a
+          href="https://one.exnesstrack.net/a/s0cxkwr4tg?platform=mobile&pid=mobile_share"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="/exness.jpg" alt="Exness" />
+        </a>
       </div>
       <footer>
         &copy; {new Date().getFullYear()}{" "}

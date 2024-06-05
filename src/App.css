@@ -96,6 +96,11 @@ p {
   justify-content: center;
 }
 
+#exness-link a img {
+  width: 200px; /* Adjust width as needed */
+  height: auto;
+}
+
 /* Footer Styles */
 footer {
   margin-top: 20px;
