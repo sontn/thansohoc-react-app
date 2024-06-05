@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import ReactGA from "react-ga4";
+import QRCode from "qrcode.react";
 
 // Initialize Google Analytics
 const trackingId = "G-W5H2WCTTML"; // Replace with your Google Analytics tracking ID
@@ -91,6 +92,9 @@ function App() {
           <p>{error}</p>
         </div>
       )}
+      <div id="qr-code">
+        <QRCode value="https://tracuuthansohoc.live" />
+      </div>
       <footer>
         &copy; {new Date().getFullYear()}{" "}
         <a

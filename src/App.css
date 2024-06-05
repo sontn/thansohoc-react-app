@@ -89,6 +89,13 @@ p {
   color: #c62828;
 }
 
+/* QR Code Styles */
+#qr-code {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
 /* Footer Styles */
 footer {
   margin-top: 20px;
