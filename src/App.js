@@ -75,7 +75,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Tra cứu số điện thoại dựa vào 81 linh số</h1>
+      <h1>Tra cứu số điện thoại dựa vào 81 linh số.</h1>
       <form onSubmit={handleSubmit}>
         Số điện thoại
         <label>
